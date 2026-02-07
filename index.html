@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Image to 3D WebApp</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <main class="container">
+      <header class="hero">
+        <h1>Image → 3D WebApp</h1>
+        <p>Upload one image and generate a browser-side 3D-style point cloud preview.</p>
+      </header>
+
+      <section class="card controls">
+        <label for="imageInput" class="label">Upload image</label>
+        <input id="imageInput" type="file" accept="image/*" />
+        <div class="buttonRow">
+          <button id="convertButton" disabled>Convert to 3D</button>
+          <button id="resetButton" class="secondary">Reset</button>
+        </div>
+        <p class="hint">Tip: brighter pixels are projected farther forward on the z-axis.</p>
+      </section>
+
+      <section class="grid">
+        <article class="card">
+          <h2>Input Preview</h2>
+          <canvas id="inputCanvas" width="480" height="480"></canvas>
+        </article>
+
+        <article class="card">
+          <h2>3D Preview</h2>
+          <canvas id="pointCloudCanvas" width="480" height="480"></canvas>
+        </article>
+      </section>
+    </main>
+
+    <script src="app.js"></script>
+  </body>
+</html>
